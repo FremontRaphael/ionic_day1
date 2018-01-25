@@ -11,7 +11,7 @@ Cancel </button>
   <ion-content>
  
   	    <ion-list>
-      <ion-item class="item-thumbnail-left item-icon-right" ng-repeat="item in myMembers | filter:MemberSearch | orderBy:'-Online'" type="item-text-wrap" href="#/tab/account/{{item.Id}}">
+      <ion-item class="item-avatar item-icon-right" ng-repeat="item in myMembers | filter:MemberSearch | orderBy:'-Online'" type="item-text-wrap" href="#/tab/account/{{item.Id}}">
         <img ng-src="img/{{item.Image}}" style="border-radius: 15px;   border: 2px solid #999999;">
         <h2>{{item.Name + " " + item.LastName}}</h2>
 
