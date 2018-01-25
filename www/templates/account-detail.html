@@ -1,0 +1,17 @@
+<ion-view view-title="Account Details">">
+  <ion-content>
+
+    <div class="card">
+
+        <img ng-src="img/{{oneAccount.Image}}" style="border-radius: 15px;   border: 2px solid #999999;">
+        <h2>{{oneAccount.Name + " " + oneAccount.LastName}}</h2>
+    
+        <p>{{"Role: " + oneAccount.Poste}}</p>
+        <p>{{"Age : " + oneAccount.Age}}</p>
+                  <img src="img/Cgreen.png" style="width: 15px" ng-show="{{oneAccount.Online}}">
+          <img src="img/Cred.png" style="width: 15px" ng-show="{{!oneAccount.Online}}">
+
+    </div>
+
+  </ion-content>
+</ion-view>
