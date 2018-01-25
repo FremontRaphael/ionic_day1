@@ -1,15 +1,15 @@
 <ion-view view-title="Account Details">">
   <ion-content>
 
-    <div class="card">
+    <div class="padding">
 
-        <img ng-src="img/{{oneAccount.Image}}" style="border-radius: 15px;   border: 2px solid #999999;">
-        <h2>{{oneAccount.Name + " " + oneAccount.LastName}}</h2>
+        <img ng-src="img/{{oneAccount.Image}}" height="200" width="200" style="border-radius: 15px;   border: 2px solid #999999; display: block; margin: 0 auto;">
+        <h2>{{oneAccount.Name + " " + oneAccount.LastName}} <img src="img/Cgreen.png" style="width: 15px" ng-show="{{oneAccount.Online}}">
+          <img src="img/Cred.png" style="width: 15px" ng-show="{{!oneAccount.Online}}"></h2>
     
         <p>{{"Role: " + oneAccount.Poste}}</p>
         <p>{{"Age : " + oneAccount.Age}}</p>
-                  <img src="img/Cgreen.png" style="width: 15px" ng-show="{{oneAccount.Online}}">
-          <img src="img/Cred.png" style="width: 15px" ng-show="{{!oneAccount.Online}}">
+        <p>Biography:<br> {{oneAccount.Bio}}
 
     </div>
 

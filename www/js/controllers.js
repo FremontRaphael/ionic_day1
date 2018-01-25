@@ -2,10 +2,6 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
-.controller('AccountDetailCtrl', function($scope, $stateParams, account) {
-  $scope.oneAccount = accounts.get($stateParams.Name);
-
-})
 .controller('ChatsCtrl', function($scope, Courses) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -23,8 +19,13 @@ angular.module('starter.controllers', [])
   console.log("course = " + $scope.course);
 })
 
-.controller('AccountCtrl', function($scope) {
+.controller('AccountCtrl', function($scope, Member) {
   $scope.settings = {
     enableFriends: true
   };
+  $scope.myMembers = Member.all();
+})
+
+.controller('AccountDetailCtrl', function($scope, $stateParams, Member) {
+  $scope.oneAccount = Member.get($stateParams.Id);
 });

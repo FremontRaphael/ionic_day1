@@ -78,15 +78,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
-      .state('tab.account-detail', {
-      url: '/account/:Name',
-      views: {
-        'tab-account': {
-          templateUrl: 'templates/account-detail.html',
-          controller: 'accountDetailCtrl'
-        }
+    .state('tab.account-detail', {
+    url: '/account/:Id',
+    views: {
+      'tab-account': {
+        templateUrl: 'templates/account-detail.html',
+        controller: 'AccountDetailCtrl'
       }
-    });
+    }
+  })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');

@@ -11,13 +11,13 @@ Cancel </button>
   <ion-content>
  
   	    <ion-list>
-      <ion-item class="item-thumbnail-left item-icon-right item-text-wrap" ng-repeat="item in myMembers | filter : MemberSearch" href="#/tab/account/{{item.Name}}">
+      <ion-item class="item-thumbnail-left item-icon-right" ng-repeat="item in myMembers" type="item-text-wrap" href="#/tab/account/{{item.Id}}">
         <img ng-src="img/{{item.Image}}" style="border-radius: 15px;   border: 2px solid #999999;">
         <h2>{{item.Name + " " + item.LastName}}</h2>
 
           <i class="icon ion-chevron-right icon-accessory"></i>
           <img src="img/Cgreen.png" style="width: 15px" ng-show="{{item.Online}}">
-          <img src="img/Cred.png" style="width: 15px" ng-hide="{{!item.Online}}">
+          <img src="img/Cred.png" style="width: 15px" ng-show="{{!item.Online}}">
       </ion-item>
     </ion-list>
 
