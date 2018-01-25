@@ -1,17 +1,17 @@
-<ion-view view-title="Faculty"><!--
+<ion-view view-title="Faculty">
   <ion-header-bar class="bar bar-subheader item-input-inset">
   <label class="item-input-wrapper">
     <i class="icon ion-ios-search placeholder-icon"></i>
     <input type="search"  placeholder="Seach" ng-model="MemberSearch">
   </label>
-<button class="button button-clear button-positive" ng-click="MemberSearch="">
+<button class="button button-clear button-positive" ng-click="MemberSearch=''">
 Cancel </button>
 </ion-header-bar>
-!-->
+
   <ion-content>
  
   	    <ion-list>
-      <ion-item class="item-thumbnail-left item-icon-right" ng-repeat="item in myMembers" type="item-text-wrap" href="#/tab/account/{{item.Id}}">
+      <ion-item class="item-thumbnail-left item-icon-right" ng-repeat="item in myMembers | filter:MemberSearch | orderBy:'-Online'" type="item-text-wrap" href="#/tab/account/{{item.Id}}">
         <img ng-src="img/{{item.Image}}" style="border-radius: 15px;   border: 2px solid #999999;">
         <h2>{{item.Name + " " + item.LastName}}</h2>
 
